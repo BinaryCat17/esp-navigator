@@ -1,0 +1,4 @@
+[esp-idf-sys]
+idf_path = "/home/smirn/esp/esp-idf"
+esp_idf_tools_install_dir = "global"
+sdkconfig_defaults = ["sdkconfig.defaults"]

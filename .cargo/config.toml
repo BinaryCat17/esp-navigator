@@ -1,0 +1,18 @@
+[build]
+target = "xtensa-esp32-espidf"
+
+[target.xtensa-esp32-espidf]
+linker = "ldproxy"
+runner = "espflash flash --monitor"
+rustflags = [ "--cfg",  "espidf_time64"]
+
+[unstable]
+build-std = ["std", "panic_abort"]
+
+[env]
+MCU="esp32"
+# Note: this variable is not used by the pio builder (`cargo build --features pio`)
+IDF_PATH = "/home/smirn/esp/esp-idf"
+IDF_TOOLS_PATH = "/home/smirn/.espressif"
+CMAKE_FORCE_RESPONSE_FILE = "OFF"
+
